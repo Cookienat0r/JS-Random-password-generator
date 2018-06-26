@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" type="text/css" href="styles_main.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="login_page.html"><img class="logo" src="img/CUNY_BB.jpg"></a>
+    </header>
+
+    <div class="container">
+      <div class="assignment_form">
+        <form class="assignments">
+          <label class="select_label">Select Course and Section</label>
+          <input class="select_dropdown" list="ClassSections" name="ClassSection">
+          <datalist id="ClassSections">
+            <option value="CIS 5800 Sec. FRMA">
+            <option value="ACC 3100 Sec. CMFA">
+            <option value="BPL 5100 Sec. MTFA">
+          </datalist>
+        </form>
+    
+        <form class="assignments">
+          <label class="select_label">Select Assignment</label>
+          <input class="select_dropdown" list="Assignment" name="Assignment">
+          <datalist id="Assignment">
+            <option value="HW 1 ">
+            <option value="Quiz 1 ">
+            <option value="Lab 1 ">
+          </datalist>
+        </form>
+
+        <div class="assignments">
+          <label class="select_label">Select Students</label>
+            <div class="select_student"><input type="checkbox" onclick = "toggle(this);"> SELECT ALL</div>
+            <div class="select_student"><input type="checkbox" id="Nikki" value="Nikki"> Nikki</div>
+            <div class="select_student"><input type="checkbox" id="Natalia" value="Natalia"> Natalia</div>
+            <div class="select_student"><input type="checkbox" id="Peter" value="Peter"> Peter</div>
+            <div class="select_student"><input type="checkbox" id="Ashelle" value="Ashelle"> Ashelle</div>
+            <div class="select_student"><input type="checkbox" id="Tori" value="Tori"> Tori</div>
+        </div>
+        <button class="button"><a class="gotopage" href="completion_page.html">Assign Password</a></button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function toggle(source) {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i] != source)
+                checkboxes[i].checked = source.checked;
+        }
+    }
+  </script>
+
+</html>
+
+
