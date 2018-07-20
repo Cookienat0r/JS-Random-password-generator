@@ -1,4 +1,4 @@
-# Random-password-generator
+# (JavaScript) Random-password-generator
 
 Tools: JavaScript, HTML, CSS 
 <br>
